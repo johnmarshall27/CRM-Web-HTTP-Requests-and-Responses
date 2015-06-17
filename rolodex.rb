@@ -2,15 +2,15 @@ require_relative('contact.rb')
 
 
 class Rolodex
-attr_reader :contacts
+  attr_reader :contacts
   def initialize
     @contacts = []
-    @@id = 1000
+    @@highest_id = 1000
   end
 
-  def add_contact(first_name, last_name, email, note)
-    contact = Contact.new(@@id, first_name,last_name, email, note)
-    @@id += 1
+  def add_contact( first_name , last_name , email , note)
+    contact = Contact.new(@@highest_id, first_name,last_name, email, note)
+    @@highest_id += 1
 
     @contacts << contact
   end

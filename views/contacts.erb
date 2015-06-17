@@ -1,7 +1,9 @@
 <h1>Welcome to the contacts page</h1>
 
 <ul>
-  <% $rolodex.contacts.each do |contact| %>
+  <% @contacts.each do |contact| %>
     <li><%= contact.first_name %> <%= contact.last_name %></li>
   <% end %>
 </ul>
+
+<p>(<%= @contacts.size %> contacts)</p>
