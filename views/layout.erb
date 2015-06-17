@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head> This is John Marshall's Page
+  <head><em>This is John Marshall's Page</em>
     <title> Hello</title>
     <style>
       p {
@@ -18,6 +18,42 @@
   <a href="https://www.google.ca/maps/place/Bitmaker+Labs/@43.647477,-79.38709,15z/data=!4m2!3m1!1s0x0:0x38fdb7d96640b4da?sa=X&ei=9MSBVYWHA6-OsQTOwYmYDA&ved=0CIABEPwSMA0">220 King St. West</a>
   </head>
   <body>
-    <%= yield %>
+   <%= yield %>
+   <table style="border-collapse:collapse;">
+            <thead>
+                <tr>
+                    <th colspan="2"; style="color:red;">Favourite Teams by Sport</th>
+                </tr>
+                <tr style="border-bottom:1px solid black;">
+                    <th style="padding:5px;"><em>Team</em></th>
+                    <th style="padding:5px;border-left:1px solid black;"><em>Sport</em></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding:5px;">Toronto Maple Leafs</td>
+                    <td style="padding:5px;border-left:1px solid black;">Hockey</td>
+                </tr>
+
+                <tr>
+                    <td style="padding:5px;">Toronto Raptors</td>
+                    <td style="padding:5px;border-left:1px solid black;">Basketball</td>
+                </tr>
+
+                <tr>
+                    <td style="padding:5px;">Minnesota Vikings</td>
+                    <td style="padding:5px;border-left:1px solid black;">Football</td>
+                </tr>
+
+                <tr>
+                    <td style="padding:5px;">Toronto Bluejays</td>
+                    <td style="padding:5px;border-left:1px solid black;">Baseball</td>
+                </tr>
+            </tbody>
+        </table>
+
   </body>
 </html>
+
+
+<html>
