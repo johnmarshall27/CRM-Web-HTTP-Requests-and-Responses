@@ -4,7 +4,6 @@ require_relative'contact'
 require_relative 'rolodex'
 
 $rolodex = Rolodex.new
-$rolodex.add_contact("1000", "John","Marshall","john.marshall@ucc.on.ca","chill guy")
 
 contact = $rolodex.find(1000)
 
@@ -17,7 +16,7 @@ get '/' do
 end
 
 post '/contacts' do
-  $rolodex.add_contact(params[:highest_id], params[:first_name], params[:last_name], params[:email], params[:note])
+  $rolodex.add_contact(params[:id], params[:first_name], params[:last_name], params[:email], params[:note])
   redirect to('/contacts')
 end
 
@@ -30,9 +29,12 @@ get '/contacts' do
   erb :contacts
 end
 
-get '/contacts/1000' do
-  @contact = $rolodex.find(1000)
+get '/contacts/:id' do
+  if @contact = $rolodex.find(params[:id].to_i)
   erb :show_contact
+  else
+    raise Sinatra::NotFound
+  end
 end
 
 

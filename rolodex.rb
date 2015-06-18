@@ -5,12 +5,12 @@ class Rolodex
   attr_reader :contacts
   def initialize
     @contacts = []
-    @@highest_id = 1000
+    @@id = 1000
   end
 
-  def add_contact(highest_id, first_name, last_name, email, note)
-    contact = Contact.new(@@highest_id, first_name,last_name, email, note)
-    @@highest_id += 1
+  def add_contact(id, first_name, last_name, email, note)
+    contact = Contact.new(@@id, first_name,last_name, email, note)
+    @@id += 1
 
     @contacts << contact
   end
@@ -19,8 +19,8 @@ class Rolodex
     @contacts
   end
 
-  def find(highest_id)
-    @contacts.find {|contact| contact.highest_id == highest_id}
+  def find(id)
+    @contacts.find {|contact| contact.id == id}
 
   end
 end
