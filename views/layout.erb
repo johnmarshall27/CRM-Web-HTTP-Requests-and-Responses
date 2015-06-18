@@ -4,27 +4,29 @@
     <title> Hello</title>
     <style>
       p {
-      color: green;
-      background-color: white;
+      color: SlateBlue;
+      background-color: thistle;
       }
 
       h1 {
-        font-size: 24px;
+        font-size: 16px;
       }
+
+
     </style>
   <footer>contact information:</footer>
   <footer>john.marshall@ucc.on.ca</footer>
   <footer>416 319 9769</footer>
   <a href="https://www.google.ca/maps/place/Bitmaker+Labs/@43.647477,-79.38709,15z/data=!4m2!3m1!1s0x0:0x38fdb7d96640b4da?sa=X&ei=9MSBVYWHA6-OsQTOwYmYDA&ved=0CIABEPwSMA0">220 King St. West</a>
   </head>
-  <body>
+  <body style="background-color:thistle;">
    <%= yield %>
    <table style="border-collapse:collapse;">
             <thead>
                 <tr>
-                    <th colspan="2"; style="color:red;">Favourite Teams by Sport</th>
+                    <th colspan="2"; style="color:SlateBlue;">Favourite Teams by Sport</th>
                 </tr>
-                <tr style="border-bottom:1px solid black;">
+                <tr style="border-bottom:2px solid black;">
                     <th style="padding:5px;"><em>Team</em></th>
                     <th style="padding:5px;border-left:1px solid black;"><em>Sport</em></th>
                 </tr>
@@ -32,22 +34,22 @@
             <tbody>
                 <tr>
                     <td style="padding:5px;">Toronto Maple Leafs</td>
-                    <td style="padding:5px;border-left:1px solid black;">Hockey</td>
+                    <td style="padding:5px;border-left:2px solid black;">Hockey</td>
                 </tr>
 
                 <tr>
                     <td style="padding:5px;">Toronto Raptors</td>
-                    <td style="padding:5px;border-left:1px solid black;">Basketball</td>
+                    <td style="padding:5px;border-left:2px solid black;">Basketball</td>
                 </tr>
 
                 <tr>
                     <td style="padding:5px;">Minnesota Vikings</td>
-                    <td style="padding:5px;border-left:1px solid black;">Football</td>
+                    <td style="padding:5px;border-left:2px solid black;">Football</td>
                 </tr>
 
                 <tr>
                     <td style="padding:5px;">Toronto Bluejays</td>
-                    <td style="padding:5px;border-left:1px solid black;">Baseball</td>
+                    <td style="padding:5px;border-left:2px solid black;">Baseball</td>
                 </tr>
             </tbody>
         </table>

@@ -1,12 +1,13 @@
 class Contact
-  attr_accessor :first_name, :last_name, :email, :notes
+  attr_accessor :first_name, :last_name, :email, :note
+  attr_reader :highest_id
 
-  def initialize(id, first_name, last_name, email, notes)
-    @id = id
+  def initialize(highest_id, first_name, last_name, email, note)
+    @highest_id = highest_id
     @first_name = first_name
     @last_name = last_name
     @email = email
-    @notes = notes
+    @note = note
   end
 end
 
