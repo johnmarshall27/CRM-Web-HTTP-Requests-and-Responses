@@ -37,4 +37,15 @@ get '/contacts/:id' do
   end
 end
 
+get '/contacts/:id/edit' do
+  if @contact = $rolodex.find(params[:id].to_i)
+  erb :edit_contact
+   else
+    raise Sinatra::NotFound
+  end
+end
+
+
+
+
 
