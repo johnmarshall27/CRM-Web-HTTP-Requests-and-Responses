@@ -14,11 +14,11 @@ class Contact
   property :last_name, String
   property :email, String
   property :note, String
-  end
+end
 
   DataMapper.finalize
   DataMapper.auto_upgrade!
-end
+
 
 $rolodex = Rolodex.new
 
